@@ -13,7 +13,7 @@ BankAccount(int accountNumber, String ownerName, String ownerSurname, double sal
     //paramentry oddzielone przecinkami to sa dane ktore skladaja sie z nazwy i typu//
     //dane na wejsci to co wiemy na poczatku z czego funkcja mzoe skorzstac
     this.accountNumber = accountNumber;
-    this.ownerName = ownerName;
+    this.ownerName =  ownerName;
     this.ownerSurname = ownerSurname;
     this.saldo = saldo;
 }
