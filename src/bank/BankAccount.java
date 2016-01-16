@@ -1,15 +1,17 @@
+package bank;
+
 /**
  * Created by Piotr on 2016-01-09.
  */
 public class BankAccount {
-int accountNumber;
-String ownerName;
-String ownerSurname;
-double saldo;
+public int accountNumber;
+public String ownerName;
+public String ownerSurname;
+public double saldo;
 
 
 
-BankAccount(int accountNumber, String ownerName, String ownerSurname, double saldo) {
+public BankAccount(int accountNumber, String ownerName, String ownerSurname, double saldo) {
     //paramentry oddzielone przecinkami to sa dane ktore skladaja sie z nazwy i typu//
     //dane na wejsci to co wiemy na poczatku z czego funkcja mzoe skorzstac
     this.accountNumber = accountNumber;
