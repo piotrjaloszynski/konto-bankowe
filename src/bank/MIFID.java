@@ -14,10 +14,9 @@ public class MIFID {
         String professionalClientandEligibleCounterparty;// as per MIFID
     }
 
-restrictedCountries(String cuba, String iraq, String iran){
-    this(iraq,cuba,iran);
+
 
 }
-}
+
 
 
