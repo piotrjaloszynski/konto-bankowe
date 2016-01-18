@@ -1,7 +1,9 @@
+
+
 /**
  * Created by Piotr on 2016-01-10.
  */
-public class RuleEngine extends BankAccount {
+public class RuleEngine  {
 String powerOfAttorney;
 String nationality;
 String domicile;
@@ -13,11 +15,13 @@ Boolean omnibusAccount;
 String segregatedAccount;
 String regulator;
 String legalForm;
-String countryClosed;// closed for investment
-String countryOpened;    // yes for investment
+String restrictedCountry;// closed for investment
+String countryOpened;// opened for investment
+String kyc;
+  // yes for investment
 RuleEngine(String powerOfAttorney, String nationality,String domicile, String investmentThreshold, String assets,
            Boolean countryRestrictions,Boolean omnibusAccount, String segregatedAccount, String regulator,
-           String legalForm, String countryClosed, String countryOpened ){
+           String legalForm, String restrictedCountry, String countryOpened,String kyc ){
 
   this.powerOfAttorney=powerOfAttorney;
   this.nationality=nationality;
@@ -28,12 +32,12 @@ RuleEngine(String powerOfAttorney, String nationality,String domicile, String in
   this.segregatedAccount= segregatedAccount;
   this.legalForm= legalForm;
   this.omnibusAccount=omnibusAccount;
-
-}
+  this.restrictedCountry=restrictedCountry;
+ this.kyc=kyc;}
     public String toString(){
-      return powerOfAttorney + nationality +domicile + investmentThreshold +assets +countryRestrictions+ omnibusAccount+
-    segregatedAccount + legalForm;
-
+      return powerOfAttorney +"" + nationality +"" +domicile+"" + investmentThreshold+"" +assets+"" +countryRestrictions+"" +omnibusAccount+
+    segregatedAccount+"" + legalForm+"" +kyc;
+//return Ulica + " " + Numer + " " + Miasto;
     }
 }
 

@@ -1,3 +1,5 @@
+import BankAccount.BankAccount;
+
 /**
  * Created by Piotr on 2016-01-08.
  */
@@ -20,5 +22,7 @@ public class Main {
         System.out.println("Wyplacam:="+ amount );
         System.out.println("Po wyplacie:="+ c.saldo);
 
+        BankAccount d= new BankAccount("zl");
+        System.out.println(d.zl);
     }
 }
