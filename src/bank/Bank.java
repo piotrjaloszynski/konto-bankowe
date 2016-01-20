@@ -7,7 +7,8 @@ import model.Address;
  */
 public class Bank {
     private String name;
-    private Address address; // odnosimy sie do klasy , nazwa skladowych mala litera.
+    private Address address; // odnosimy sie do klasy , nazwa skladowych mala litera. jak mamy obiekt addres to oddzielna tabela
+    // w sql , i powiazanie
     private BankAccount[] bankAccounts; // tablica zrobic tablice
     private int bankAccountsNumber; // ile realnie  za rzedem 25 zeby wpisac
     public Bank() {
