@@ -11,6 +11,10 @@ String futuresAndOptions;
 String derivativeInstrumentsForTransferOfCreditRisk;
 String financialContractsForDifferences;
 
+    FinancialInstruments(){
+
+    }
+
     FinancialInstruments(String  moneyMarketInstruments, String  unitsInCollectiveInvestmentUndertakings,
                          String  transferableSecurities,String  futuresAndOptions,String derivativeInstrumentsForTransferOfCreditRisk,
                          String  financialContractsForDifferences){

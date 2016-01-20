@@ -10,24 +10,36 @@ public class BankAccount {
     public double saldo;
     String currency;
     double debit;
+    String interestGrowthSavingAccount;
+    String giftSavingAccount;
     String relationshipManager;
+    String privateBankAccount;
+    String savingAccount;
+    String savingAccountForYoungPeople;
     BankAccount() {//konstr bezparamentryczny
     }
-    BankAccount(int accountNumber, String ownerName, String ownerSurname, double saldo, String currency, double debit,
+    BankAccount( String savingAccountForYoungPeople,String savingAccount,String privateBankAccount, String interestGrowthSavingAccount,int accountNumber,String giftSavingAccount, String ownerName, String ownerSurname, double saldo, String currency, double debit,
                 String relationshipManager){
 
-    this.accountNumber=accountNumber;
+        this.savingAccountForYoungPeople=savingAccountForYoungPeople;
+        this.giftSavingAccount=giftSavingAccount;
+        this.accountNumber=accountNumber;
     this.ownerName=ownerName;
     this.ownerSurname=ownerSurname;
     this.saldo=saldo;
     this.currency=currency;
     this.debit=debit;
     this.relationshipManager=relationshipManager;
+    this.interestGrowthSavingAccount= interestGrowthSavingAccount;
+    this.privateBankAccount=privateBankAccount;
+    this.savingAccount=savingAccount;
+
+
     }
 
     public String toString() {// standardowa metoda ktora w javie funkcojonuje ktory ma pokazac obiekt na napis
 
-        return accountNumber + " " + ownerName + " " + ownerSurname + " " + saldo + " " + currency+ ""+debit+""+relationshipManager;
+        return savingAccount+""+ privateBankAccount+""+accountNumber+""+ interestGrowthSavingAccount+" " + ownerName+" " +giftSavingAccount + " " + ownerSurname + " " + saldo + " " + currency+ ""+debit+""+relationshipManager;
     }
 
 

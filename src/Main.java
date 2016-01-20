@@ -1,4 +1,5 @@
 import BankAccount.BankAccount;
+import bank.RestrictedCountries;
 
 /**
  * Created by Piotr on 2016-01-08.
@@ -25,4 +26,6 @@ public class Main {
         BankAccount d= new BankAccount("zl");
         System.out.println(d.zl);
     }
+
+
 }

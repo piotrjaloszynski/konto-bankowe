@@ -18,7 +18,11 @@ String legalForm;
 String restrictedCountry;// closed for investment
 String countryOpened;// opened for investment
 String kyc;
-  // yes for investment
+
+    RuleEngine(){
+
+    }
+    // yes for investment
 RuleEngine(String powerOfAttorney, String nationality,String domicile, String investmentThreshold, String assets,
            Boolean countryRestrictions,Boolean omnibusAccount, String segregatedAccount, String regulator,
            String legalForm, String restrictedCountry, String countryOpened,String kyc ){

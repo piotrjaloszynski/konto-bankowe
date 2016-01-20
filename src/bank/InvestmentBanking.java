@@ -1,25 +1,38 @@
 package bank;
+import BankAccount;
 
 /**
  * Created by Gosia on 2016-01-11.
  */
 public class InvestmentBanking {
-    String retailClientOnly;// as per MIFID
-    String professionalClientOnly;//as per MIFID
-    String retailAndProfessionalClientOnly;// as per MIFID
-    String professionalClientandEligibleCounterparty;// as per MIFID
+private String initialPublicOfferings;
+private String debtfinancing;
+private String corporatebonds;
+private String financialStatement;
+private String prospectus;
+private String shares;
+private RestrictedCountries restrictedCountries;
+private RuleEngine ruleengine;
 
-InvestmentBanking(String retailClientOnly,String professionalClientOnly,String retailAndProfessionalClientOnly,
-                 String professionalClientandEligibleCounterparty){
+ InvestmentBanking(String initialPublicOfferings, String debtfinancing, String corporatebonds, String financialStatement,
+         String prospectus,String shares){
+     this.initialPublicOfferings=initialPublicOfferings;
+     this.debtfinancing=debtfinancing;
+     this.corporatebonds=corporatebonds;
+     this.financialStatement=financialStatement;
+     this.prospectus=prospectus;
+     this.shares=shares;
 
-   this.retailClientOnly=retailClientOnly;
-    this.professionalClientOnly=professionalClientOnly;
-    this.retailAndProfessionalClientOnly=retailAndProfessionalClientOnly;
-    this.professionalClientandEligibleCounterparty=professionalClientandEligibleCounterparty;
+//Trades();
+//advises();
+// corporate issues of new shares();
+
+
 }
 
     public String toString(){
-    return retailClientOnly+""+  professionalClientOnly+""+ retailAndProfessionalClientOnly+""+   professionalClientandEligibleCounterparty;
+    return initialPublicOfferings+ " "+ debtfinancing+ ""+ corporatebonds+" "+ financialStatement+""+ prospectus+ "" +
+    shares;
     }
 }
 
