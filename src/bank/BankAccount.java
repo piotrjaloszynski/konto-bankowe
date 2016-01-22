@@ -1,4 +1,5 @@
-package BankAccount;
+package bank;
+/// CO Z TYM ZROBIC import model.Address;
 import model.Address;
 /**
  * Created by Piotr on 2016-01-09.
@@ -16,10 +17,34 @@ public class BankAccount {
     private String privateBankAccount;
     private String savingAccount;
     private String savingAccountForYoungPeople;
-    private Address address;
 
+    private Address address; // odnosimy sie do klasy , nazwa skladowych mala litera.
     BankAccount() {//konstr bezparamentryczny
     }
+    private BankAccount[] bankAccounts; // tablica zrobic tablice
+    private int bankAccountsNumber; // ile realnie  za rzedem 25 zeby wpisac
+
+
+    bankAccounts = new BankAccount[10]; // tworzymy w tablicy puste miejsce  struktrure 10 komorek od 0 do 9
+    bankAccountsNumber = 0;
+// void ze nic sie nie pojawi
+    public void addBankAccount(int accountNumber, String ownerName, String ownerSurname){// zeby ona dzialala to potrzebuje zeby
+        // ktos dodal ..
+        BankAccount newBankAccount = new BankAccount(accountNumber,ownerName, ownerSurname); // sugeruje nazwa  co bedzieznaczyc
+        // teraz wpisac do ktorej z tych komorek np. do zerowej
+        //bankAccounts[0] miejsce w tablicy do ktorego chcemy wpisac
+        bankAccounts[bankAccountsNumber]=newBankAccount; // [przypisujemy do new bank account do zerowej komorki
+        bankAccountsNumber++;// za kazdym razem bedzie dodawac w kontach komorek, zeby dodac jedno niz wiecej kont
+
+    }
+    public void displayBankAccountList(){
+        // petla zalatwi wswietlanie rachunkow
+        for (int i=0; i<bankAccountsNumber; i++){
+            System.out.println(bankAccounts[i]); // zeby wyciagnac konkretna kororke , i spelnia role licznika petli a druga
+            // rola odwoluje soe do konkretnej komorki tablicy , i sie zwieksza o 1
+        }
+
+
     BankAccount( String savingAccountForYoungPeople,String savingAccount,String privateBankAccount, String interestGrowthSavingAccount,int accountNumber,String giftSavingAccount, String ownerName, String ownerSurname, double saldo, String currency, double debit,
                 String relationshipManager){
 
@@ -38,6 +63,7 @@ public class BankAccount {
 
 
     }
+
 
     public String toString() {// standardowa metoda ktora w javie funkcojonuje ktory ma pokazac obiekt na napis
 
@@ -82,3 +108,6 @@ public class BankAccount {
         }
         }
     }
+// warunki
+// moze otworzyc konto jesli spelnia warunki z rule engine
+// i nie pochodzi z restricted countries
