@@ -13,7 +13,20 @@ private String chargingfortrading;
 public String getTrading(){
     return trading;
 }
-public void setChargingfortrading(){
+
+    public void setTrading(String trading) {
+        this.trading = trading;
+    }
+
+    public String getChargingfortrading() {
+        return chargingfortrading;
+    }
+
+    public void setChargingfortrading(String chargingfortrading) {
+        this.chargingfortrading = chargingfortrading;
+    }
+
+    public void setChargingfortrading(){
     this.chargingfortrading=chargingfortrading;
 
 }

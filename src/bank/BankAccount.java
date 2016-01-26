@@ -1,6 +1,6 @@
 package bank;
 /// CO Z TYM ZROBIC import model.Address;
-import model.Address;
+
 /**
  * Created by Piotr on 2016-01-09.
  */
@@ -10,13 +10,13 @@ public class BankAccount {
     private String ownerSurname;
     private  double saldo;
     private String currency;
-    private double debit;
-    private String interestGrowthSavingAccount;
-    private String giftSavingAccount;
-    private String relationshipManager;
-    private String privateBankAccount;
-    private String savingAccount;
-    private String savingAccountForYoungPeople;
+    private Boolean debit;
+    private Boolean interestGrowthSavingAccount;
+    private Boolean giftSavingAccount;
+
+    private Boolean privateBankAccount;
+    private Boolean savingAccount;
+    private Boolean savingAccountForYoungPeople;
 
     private Address address; // odnosimy sie do klasy , nazwa skladowych mala litera.
     BankAccount() {//konstr bezparamentryczny
@@ -25,7 +25,7 @@ public class BankAccount {
     private int bankAccountsNumber; // ile realnie  za rzedem 25 zeby wpisac
 
 
-    bankAccounts = new BankAccount[10]; // tworzymy w tablicy puste miejsce  struktrure 10 komorek od 0 do 9
+    bankAccountsNumber = new BankAccount[10]; // tworzymy w tablicy puste miejsce  struktrure 10 komorek od 0 do 9
     bankAccountsNumber = 0;
 // void ze nic sie nie pojawi
     public void addBankAccount(int accountNumber, String ownerName, String ownerSurname){// zeby ona dzialala to potrzebuje zeby
@@ -36,7 +36,142 @@ public class BankAccount {
         bankAccounts[bankAccountsNumber]=newBankAccount; // [przypisujemy do new bank account do zerowej komorki
         bankAccountsNumber++;// za kazdym razem bedzie dodawac w kontach komorek, zeby dodac jedno niz wiecej kont
 
+        BankAccount( Boolean savingAccountForYoungPeople,Boolean savingAccount,Boolean privateBankAccount, Boolean interestGrowthSavingAccount,int accountNumber,Boolean giftSavingAccount, String ownerName, String ownerSurname, double saldo, String currency, Boolean debit,
+        ){
+
+            this.savingAccountForYoungPeople=savingAccountForYoungPeople;
+            this.giftSavingAccount=giftSavingAccount;
+            this.accountNumber=accountNumber;
+            this.ownerName=ownerName;
+            this.ownerSurname=ownerSurname;
+            this.saldo=0;
+            this.currency=currency;
+            this.debit=debit;
+
+            this.interestGrowthSavingAccount= interestGrowthSavingAccount;
+            this.privateBankAccount=privateBankAccount;
+            this.savingAccount=savingAccount;
+
+
+        }
     }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+    }
+
+    public String getOwnerSurname() {
+        return ownerSurname;
+    }
+
+    public void setOwnerSurname(String ownerSurname) {
+        this.ownerSurname = ownerSurname;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public double getDebit() {
+        return debit;
+    }
+
+    public void setDebit(double debit) {
+        this.debit = debit;
+    }
+
+    public String getInterestGrowthSavingAccount() {
+        return interestGrowthSavingAccount;
+    }
+
+    public void setInterestGrowthSavingAccount(String interestGrowthSavingAccount) {
+        this.interestGrowthSavingAccount = interestGrowthSavingAccount;
+    }
+
+
+
+    public String getSavingAccount() {
+        return savingAccount;
+    }
+
+    public void setSavingAccount(String savingAccount) {
+        this.savingAccount = savingAccount;
+    }
+
+    public String getPrivateBankAccount() {
+        return privateBankAccount;
+    }
+
+    public void setPrivateBankAccount(String privateBankAccount) {
+        this.privateBankAccount = privateBankAccount;
+    }
+
+    public String getGiftSavingAccount() {
+        return giftSavingAccount;
+    }
+
+    public void setGiftSavingAccount(String giftSavingAccount) {
+        this.giftSavingAccount = giftSavingAccount;
+    }
+
+    public String getSavingAccountForYoungPeople() {
+        return savingAccountForYoungPeople;
+    }
+
+    public void setSavingAccountForYoungPeople(String savingAccountForYoungPeople) {
+        this.savingAccountForYoungPeople = savingAccountForYoungPeople;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public int getBankAccountsNumber() {
+        return bankAccountsNumber;
+    }
+
+    public void setBankAccountsNumber(int bankAccountsNumber) {
+        this.bankAccountsNumber = bankAccountsNumber;
+    }
+
+    public BankAccount[] getBankAccounts() {
+        return bankAccounts;
+    }
+
+    public void setBankAccounts(BankAccount[] bankAccounts) {
+        this.bankAccounts = bankAccounts;
+    }
+
+
+
     public void displayBankAccountList(){
         // petla zalatwi wswietlanie rachunkow
         for (int i=0; i<bankAccountsNumber; i++){
@@ -45,24 +180,7 @@ public class BankAccount {
         }
 
 
-    BankAccount( String savingAccountForYoungPeople,String savingAccount,String privateBankAccount, String interestGrowthSavingAccount,int accountNumber,String giftSavingAccount, String ownerName, String ownerSurname, double saldo, String currency, double debit,
-                String relationshipManager){
 
-        this.savingAccountForYoungPeople=savingAccountForYoungPeople;
-        this.giftSavingAccount=giftSavingAccount;
-        this.accountNumber=accountNumber;
-    this.ownerName=ownerName;
-    this.ownerSurname=ownerSurname;
-    this.saldo=0;
-    this.currency=currency;
-    this.debit=debit;
-    this.relationshipManager=relationshipManager;
-    this.interestGrowthSavingAccount= interestGrowthSavingAccount;
-    this.privateBankAccount=privateBankAccount;
-    this.savingAccount=savingAccount;
-
-
-    }
 
 
     public String toString() {// standardowa metoda ktora w javie funkcojonuje ktory ma pokazac obiekt na napis
