@@ -1,7 +1,7 @@
-package bank;
+package Account;
 
 /**
  * Created by Gosia on 2016-01-27.
  */
-public class Address {
+public class Account {
 }
