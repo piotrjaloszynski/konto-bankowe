@@ -6,21 +6,21 @@ import java.util.List;
  * Created by Piotr on 2016-01-10.
  */
 public class RuleEngine {
-    private Boolean powerOfAttorney;
-    private String nationality;
-    private String  domicile;
-    private double VAT = 23.0;//various countries various VAT
-    private String investmentThreshold;
-    private String assets;// if stock closed for business no sale or buy
-    private Boolean countryRestrictions;
-    private Boolean omnibusAccount;
-    private Boolean segregatedAccount;
-    private String regulator;
-    private String legalForm;
-    private Boolean restrictedCountry;// closed for investment
-    private Boolean countryOpened;// opened for investment
-    private Boolean kyc;
-    private Boolean relationshipManager;
+    private Boolean powerOfAttorney;// Client related question
+    private String nationality;// Client related question
+    private String  domicile;// client related question
+    private double VAT = 23.0;//various countries various VAT // financial instruments & financial serv products
+    private String investmentThreshold;// clients & financial instruments & asset managemet treshold
+    private String assets;// ASSET MANAGEMENT QUESTION,ADVISING/TRADING/CLIENTS, FINANCIAL INSTRMET,INVESTM BANKING, FINANCIAL SERV PRODUCTS
+    private Boolean countryRestrictions;// CLIENT question, advising, trading, investment banking financial services clinets,private banking
+    private Boolean omnibusAccount;// advising, AM, clients, trading,financ instruments ,priv banking, financia serv products, invst banking
+    private Boolean segregatedAccount;// advising, AM, clients, trading,financ instruments ,priv banking, financia serv products, invst banking,REGULATOR
+    private String regulator;// client, AM, CLIENTS, FINANC INSTRUMENTS, FINANCIAL SERVICE PRODUCTS, INVESTMENT BANKING, RESTRIC COUNTR,TRADING ADVISING
+    private String legalForm;// client ,advising,trading,AM,FIN INSTRUMENTS,FINANCIALSERVICES PRODUCTS, TRADING,AM
+    private Boolean restrictedCountry;// closed for investment, CLIENT, TRADING ADVISING,Inv banking,private banking,AM,
+    private Boolean countryOpened;// opened for investment,CLIENT, TRADING ADVISING,Inv banking,private banking,AM,
+    private Boolean kyc;//regulator,CLIENT,address, AM, private bank account,advising,trading,
+    private Boolean relationshipManager;//client,address,advising ,AM,financial instruments, financial services, inv banking,restricted countries
     List<QuestionsToRuleEngine> questions; // obiekt rule engine ma skladowa do pytanie
 
     RuleEngine() {

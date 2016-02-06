@@ -17,17 +17,22 @@ public class BankAccount {
     private Boolean privateBankAccount;
     private Boolean savingAccount;
     private Boolean savingAccountForYoungPeople;
+    private BankAccount[] bankAccounts; // tablica zrobic tablice   iniccjacja skladowej  albo tworze skladowa  private
+    // i dopiero konstruktor public
 
+    private int bankAccountsNumber; // ile realnie  za rzedem 25 zeby wpisac
     private Address address; // odnosimy sie do klasy , nazwa skladowych mala litera.
     BankAccount() {//konstr bezparamentryczny
+
+
+
     }
-    private BankAccount[] bankAccounts; // tablica zrobic tablice
-    private int bankAccountsNumber; // ile realnie  za rzedem 25 zeby wpisac
-
-
-    bankAccountsNumber = new BankAccount[10]; // tworzymy w tablicy puste miejsce  struktrure 10 komorek od 0 do 9
-    bankAccountsNumber = 0;
+    bankAccounts= new BankAccount[10]; // tworzymy w tablicy puste miejsce  struktrure 10 komorek od 0 do 9
+    bankAccountsNumber = 0;// jest takie pole ,  blad siepojawia poniewz mamy insturkcje na poziome calej klasy
 // void ze nic sie nie pojawi
+
+
+
     public void addBankAccount(int accountNumber, String ownerName, String ownerSurname){// zeby ona dzialala to potrzebuje zeby
         // ktos dodal ..
         BankAccount newBankAccount = new BankAccount(accountNumber,ownerName, ownerSurname); // sugeruje nazwa  co bedzieznaczyc
