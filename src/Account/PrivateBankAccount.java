@@ -28,6 +28,34 @@ class PrivateBankAccount extends Account   {
     public void setAccountsNumber(int accountsNumber) {
         this.accountsNumber = accountsNumber;
     }
-    
 
+    @Override
+    public String toString() {
+        return "PrivateBankAccount{" +
+                "credit=" + credit +
+                             ", accountsNumber=" + accountsNumber +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o){
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return true;
+        }
+    PrivateBankAccount privateBankAccount= (PrivateBankAccount) o ;
+    return ownerName.equals(privateBankAccount.ownerName);
+
+}
+
+    @Override
+
+        public int hashCode() {
+          return ownerName.hashCode();
+
+
+    }
 }

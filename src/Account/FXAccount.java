@@ -24,40 +24,35 @@ FXAccount(String ownerName, String ownerSurname, double FX){
         this.FX = FX;
     }
 
-    public void fxaccount(){
 
-}
+
+
+
 
     @Override
     public String toString() {
         return "FXAccount{" +
                 "FX=" + FX +
-                '}';
+                                '}';
     }
 
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {return true;
+        if (this == o) {
+            return true;}
             if (o == null || getClass() != o.getClass()) {
-                 return false;
-                }
-
-
-                FXAccount fxAccount = (FXAccount) o;
-
-                   return name.equals(FXAccount.name);
-    }
-
-   // @Override
-   // public int hashCode() {
-     //   return getFX() != null ? getFX().hashCode() : 0;
-
-        @Override
-           public int hashCode(){
-               return name.hashCode();
+                return true;
             }
 
 
+            FXAccount fxAccount = (FXAccount) o;
 
-}
+            return ownerName.equals(fxAccount.ownerName);
+        }
+
+        @Override
+        public int hashCode() {
+            return ownerName.hashCode();
+        }
+    }

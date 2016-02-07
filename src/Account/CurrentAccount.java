@@ -20,6 +20,38 @@ public class CurrentAccount extends Account{
 
     }
 
+    public String getLimitAccount() {
+        return limitAccount;
+    }
+
+    public void setLimitAccount(String limitAccount) {
+        this.limitAccount = limitAccount;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public double getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(double currency) {
+        this.currency = currency;
+    }
+
+    public double getDebit() {
+        return debit;
+    }
+
+    public void setDebit(double debit) {
+        this.debit = debit;
+    }
+
     @Override
     public String toString() {
         return "CurrentAccount{" +
@@ -27,6 +59,8 @@ public class CurrentAccount extends Account{
                 ", saldo=" + saldo +
                 ", currency=" + currency +
                 ", debit=" + debit +
+                "ownerSurname=" + ownerSurname +
+                "ownerName=" + ownerName +
                 '}';
     }
 
@@ -37,25 +71,22 @@ public class CurrentAccount extends Account{
         }
 
         if (o == null || getClass() != o.getClass()) {
-            return false;
+            return true;
         //if (!(o instanceof CurrentAccount)) return false;
 
 
         }
         CurrentAccount currentAccount= (CurrentAccount) o;// mamy  object rzutujemy na komputer i mamy dostep do jego skladowych
 
-
-        //if (Double.compare(that.saldo, saldo) != 0) return false;
-        //if (Double.compare(that.currency, currency) != 0) return false;
-        //if (Double.compare(that.debit, debit) != 0) return false;
-        //return limitAccount != null ? limitAccount.equals(that.limitAccount) : that.limitAccount == null;
-     return name.equals(CurrentAccount.name);
+     return ownerName.equals(currentAccount.ownerName);
     }
 
     @Override
-
+    public int hashCode() {
+        return ownerName.hashCode();
     }
-}
+    }
+
 
 
 
